@@ -18,3 +18,13 @@ Usage of ./ospf-neighbor:
   -ip string
         Local IP address with CIDR (e.g., 192.168.1.2/24)
 ```
+
+### 安装为服务
+``` shell
+./ospf-neighbor install -iface=eth0 -ip=192.168.1.24/24
+```
+
+### 卸载服务
+``` shell
+./ospf-neighbor uninstall
+```
