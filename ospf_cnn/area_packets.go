@@ -16,12 +16,12 @@ var decOpts = gopacket.DecodeOptions{
 }
 
 func (i *Interface) doReadDispatch(pkt recvPkt) {
-	dst := pkt.h.Dst
-	if dst.String() != AllSPFRouters && !dst.Equal(i.Address.IP) {
-		LogWarn("interface %s skipped 1 pkt processing causing its IPv4.Dst(%s)"+
-			" is neither AllSPFRouter(%s) nor interface addr(%s)", i.c.ifi.Name, dst.String(), AllSPFRouters, i.Address.IP.String())
-		return
-	}
+	//dst := pkt.h.Dst
+	//if dst.String() != AllSPFRouters && !dst.Equal(i.Address.IP) {
+	//	LogWarn("interface %s skipped 1 pkt processing causing its IPv4.Dst(%s)"+
+	//		" is neither AllSPFRouter(%s) nor interface addr(%s)", i.c.ifi.Name, dst.String(), AllSPFRouters, i.Address.IP.String())
+	//	return
+	//}
 	ps := gopacket.NewPacket(pkt.p, layers.LayerTypeOSPF, decOpts)
 	p := ps.Layer(layers.LayerTypeOSPF)
 	if p == nil {
