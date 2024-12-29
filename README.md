@@ -28,3 +28,6 @@ Usage of ./ospf-neighbor:
 ``` shell
 ./ospf-neighbor uninstall
 ```
+### 致谢
+ospf调用相关代码来源@povsister
+https://github.com/povsister/v2ray-core
