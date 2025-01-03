@@ -1,6 +1,9 @@
 ### 一个简单的ospf邻居添加器
 应用运行中会在指定接口添加ospf邻居
 
+api:
+
+`http://{server-ip}:{port}/restart`： 重启
 
 使用示例
 
@@ -17,6 +20,8 @@ Usage of ./ospf-neighbor:
         Network interface name
   -ip string
         Local IP address with CIDR (e.g., 192.168.1.2/24)
+  -port string
+        http server port. default 8796
 ```
 
 ### 安装为服务
